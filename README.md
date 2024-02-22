@@ -23,3 +23,34 @@ Este projeto é fruto do curso de 'Flutter: aplicando gerenciamento de estados c
 
 - build_runner: Não é específico para MobX, mas é uma ferramenta essencial quando se usa mobx_codegen ou qualquer outra biblioteca que requer geração de código em Dart. build_runner é uma ferramenta que automatiza o processo de geração de código, compilando o código fonte Dart, incluindo o código gerado por mobx_codegen. Você o executa a partir da linha de comando para gerar o código necessário para suas anotações MobX, bem como para outras tarefas de geração de código que possam ser necessárias em seu projeto Flutter.
 
+## Implementação do contador interno dos cartões
+
+ A titulo de experimento, dentro de 'contador.dart' foi implemetado o controle de estado 'setState()',  juntamente com uma variavel de controle 'valorContador' em cada evento 'onTap' porem isso não vai atender já que precisamos dessa informação centralizada para atender outros widgets então começamos com o ModX.
+
+obs: usando o mobx não é necessário a alteração do 'StatelessWidget' para o 'StatefulWidget' devido ao 'setState', pois não  mais necessário, usaremos uma instancia da classe mobx.
+
+- uso do setState()
+
+<img src="info/contador.incremento.inicial.png" alt="image setState" style="width: 55%; display: block;"/>
+
+
+- uso da classe mobX 
+
+<img src="info/store.mobx.png" alt="class mobx" style="width: 65%; display: block;"/>
+
+- classe itemStore mobX 
+
+<img src="info/itemStore.mobx.png" alt="" style="width: 65%; display: block;"/>
+
+### veja aqui o processo de conversão de classes para mobX
+
+- Primeiramente é necessário se escrever a classe com a sintaxe especifica
+
+<img src="info/mobx.example.png" alt="examplos docs mobx" style="width: 65%; display: block;"/>
+
+- depois é necessário geração da classe mobx através da linha de comando 'flutter pub run build_runner watch'
+
+- mais informações no link abaixo
+
+https://pub.dev/packages/mobx
+
