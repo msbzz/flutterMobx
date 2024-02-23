@@ -54,3 +54,36 @@ obs: usando o mobx não é necessário a alteração do 'StatelessWidget' para o
 
 https://pub.dev/packages/mobx
 
+- Criada a classe 'ItemStore()', essa será adaptada  a classe 'Contador()', que retorna o widget (Row)com sinais '+', 'valor', '-' utilizada no cartão (Cart)
+
+obs: necessário envolver o widget retornado(Row()) com a classe 'Observer' para que o mobX atualize o valor
+
+- Agora que foi implementado o contador dos cartões utilizando o mobX,teremos tambem uma classe mobx para 'CarrinhoStore()' que será utilizada em Home() assim como em Contador() já que ela será responsavél pela atualização do carrinho
+através do uso do 'provider'.
+
+  Esse provider será acionado apartir de Main()
+
+  - CarrinhoStore()
+
+  <img src="info/carrinho_store.png" alt="CarrinhoStore mobx" style="width: 65%; display: block;"/>
+
+  - Main()
+
+  <img src="info/main.carrinho.provider.png" alt="CarrinhoStore mobx" style="width: 65%; display: block;"/>
+
+
+  - Contador()
+
+
+  <img src="info/contador.observer.png" alt="contador adaptada com carrinho" style="width: 65%; display: block;"/>
+
+  - Home()
+
+   <img src="info/home.obeserver.carrinho.png" alt="home observer" style="width: 65%; display: block;"/>
+
+
+  - App()
+
+   <img src="info/app.mobx.provider.png" alt="" style="width: 25%; display: block;"/>
+
+
