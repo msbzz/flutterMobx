@@ -8,6 +8,9 @@ class CarrinhoStore = _CarrinhoStore with _$CarrinhoStore;
 abstract class _CarrinhoStore with Store {
   @observable
   List<Item> listaItem = ObservableList<Item>();
+
+  @computed
+  int get quantidadeItem => listaItem.length;
   
 
   @action

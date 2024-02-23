@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
                                         padding:
                                             const EdgeInsets.only(right: 8.0),
                                         child: Text(
-                                          "${carrinhoStore.listaItem.length}",
+                                          "${carrinhoStore.quantidadeItem}",
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Theme.of(context)

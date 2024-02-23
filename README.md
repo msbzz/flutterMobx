@@ -109,3 +109,20 @@ obs: adoção da classe 'ObservableList' para permitir que o lenght do array sej
 
 
  <img src="info/home.obeserver.carrinho.png" alt="" style="width: 25%; display: block;"/>
+
+
+ ### Utilização do conceito 'observável condicional'
+
+   Adaptação da classe CarrinhoStore() com a criação da variavel 'quantidadeItem' utlizando o conceito de 'observável condicional' que é a possibilidade de sempre estar atualizada quando 'listaItem' for modificada.
+
+   obs: necessária a anotação '@computed'
+
+  <img src="info/carrinho.computed.png" alt="" style="width: 25%; display: block;"/>
+
+    - Adaptação da Home() que volta a utilizar a varíavel 'quantidadeItem'
+
+
+  <img src="info/home.total.variavel.png" alt="" style="width: 25%; display: block;"/>  
+
+
+
