@@ -111,18 +111,28 @@ obs: adoção da classe 'ObservableList' para permitir que o lenght do array sej
  <img src="info/home.obeserver.carrinho.png" alt="" style="width: 25%; display: block;"/>
 
 
- ### Utilização do conceito 'observável condicional'
+ ### Utilização do conceito 'observável condicional' em total itens do carrinho
 
    Adaptação da classe CarrinhoStore() com a criação da variavel 'quantidadeItem' utlizando o conceito de 'observável condicional' que é a possibilidade de sempre estar atualizada quando 'listaItem' for modificada.
 
    obs: necessária a anotação '@computed'
 
-  <img src="info/carrinho.computed.png" alt="" style="width: 25%; display: block;"/>
+  <img src="info/carrinho.computed.png" alt="" style="width: 35%; display: block;"/>
 
     - Adaptação da Home() que volta a utilizar a varíavel 'quantidadeItem'
 
 
-  <img src="info/home.total.variavel.png" alt="" style="width: 25%; display: block;"/>  
+  <img src="info/home.total.variavel.png" alt="" style="width: 35%; display: block;"/>  
+
+ ### Utilização do conceito 'observável condicional' em apresentar o botão ver carrinho  
+
+ - utilização do conceito de 'observavel condicional' para controlar se a lista esta vazia em CarrinhoStore()
+
+ <img src="info/carrinho.controle.lista.vazia.png" alt="" style="width: 35%; display: block;"/>
+
+ - Apresentação do botão somente quando existir itens selecionados ou a lista estiver preenchida com a utilização de uma condição ternária
+
+<img src="info/home.ternario.apresenta.btn.carrinho.png" alt="" style="width: 35%; display: block;"/> 
 
 
 

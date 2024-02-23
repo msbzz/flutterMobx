@@ -38,71 +38,74 @@ class Home extends StatelessWidget {
             SliverFillRemaining(
               hasScrollBody: false,
               child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Observer(
-                    builder: (_) => InkWell(
-                          onTap: () {},
-                          child: Ink(
-                              width: double.infinity,
-                              height: 80,
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                  color:
-                                      Theme.of(context).colorScheme.surfaceTint,
-                                  borderRadius: const BorderRadius.vertical(
-                                      top: Radius.circular(10))),
-                              child: Stack(children: [
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 8.0),
-                                        child: Text(
-                                          "${carrinhoStore.quantidadeItem}",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimary),
+                  alignment: Alignment.bottomCenter,
+                  child: Observer(
+                    builder: (_) => !carrinhoStore.listaVazia
+                        ? InkWell(
+                            onTap: () {},
+                            child: Ink(
+                                width: double.infinity,
+                                height: 80,
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .surfaceTint,
+                                    borderRadius: const BorderRadius.vertical(
+                                        top: Radius.circular(10))),
+                                child: Stack(children: [
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Row(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 8.0),
+                                          child: Text(
+                                            "${carrinhoStore.quantidadeItem}",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onPrimary),
+                                          ),
                                         ),
-                                      ),
-                                      Icon(
-                                        Icons.shopping_basket_outlined,
-                                        size: 24,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onPrimary,
-                                      )
-                                    ],
+                                        Icon(
+                                          Icons.shopping_basket_outlined,
+                                          size: 24,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onPrimary,
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Ver carrinho",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onPrimary),
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Ver carrinho",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onPrimary),
+                                    ),
                                   ),
-                                ),
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Text(
-                                    "R\$ 00,00",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onPrimary),
+                                  Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Text(
+                                      "R\$ 00,00",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onPrimary),
+                                    ),
                                   ),
-                                ),
-                              ])),
-                        )),
-              ),
+                                ])),
+                          )
+                        : Container(),
+                  )),
             )
           ],
         ),
