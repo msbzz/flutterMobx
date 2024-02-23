@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:panucci_delivery/models/item.dart';
 import 'package:panucci_delivery/store/carrinho_store.dart';
 import 'package:panucci_delivery/store/item_store.dart';
 import 'package:provider/provider.dart';
 
 class Contador extends StatelessWidget {
-Contador({ Key? key }) : super(key: key);
- 
+  
+Contador({ Key? key, required this.item }) : super(key: key);
+
+final Item item;
+
    final ItemStore itemStore = ItemStore(); 
    
    @override
@@ -23,7 +27,7 @@ Contador({ Key? key }) : super(key: key);
                
                 if (itemStore.valorContador>0){
                   itemStore.removeItem();
-                  carrinhoStore.removeCarrinho();
+                  carrinhoStore.removeCarrinho(item);
                 }
                ;
           },
@@ -35,7 +39,7 @@ Contador({ Key? key }) : super(key: key);
           onTap: () {
             
                itemStore.adicionaItem();
-               carrinhoStore.adicionaCarrinho();
+               carrinhoStore.adicionaCarrinho(item);
              ; 
           },
           child: const Icon(Icons.add_circle_outline, size: 20,),

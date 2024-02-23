@@ -54,6 +54,8 @@ obs: usando o mobx não é necessário a alteração do 'StatelessWidget' para o
 
 https://pub.dev/packages/mobx
 
+### adicionando contador de itens
+ 
 - Criada a classe 'ItemStore()', essa será adaptada  a classe 'Contador()', que retorna o widget (Row)com sinais '+', 'valor', '-' utilizada no cartão (Cart)
 
 obs: necessário envolver o widget retornado(Row()) com a classe 'Observer' para que o mobX atualize o valor
@@ -87,3 +89,23 @@ através do uso do 'provider'.
    <img src="info/app.mobx.provider.png" alt="" style="width: 25%; display: block;"/>
 
 
+### Modificando carrinho para usar lista
+
+- Adaptação de CarrinhoStore() para trabalhar diretamente com array de item (listaItem)
+obs: adoção da classe 'ObservableList' para permitir que o lenght do array seja usado em Home()  
+
+ <img src="info/carrinho.store.usando.lista.png" alt="" style="width: 25%; display: block;"/>
+
+
+- Adaptação da classe Cartao() onde será passado um paramtro item para Contador()
+
+ <img src="info/cartao.paramtro.item.contador.png" alt="" style="width: 25%; display: block;"/>
+
+- Adaptação da classe Contador() para que receba item como parametro e passe para os metodos da classe 'carrinhoStore'
+
+ <img src="info/contador.parametro.item.png" alt="" style="width: 25%; display: block;"/>
+
+- Adaptação da classe Home() para que utilize a propriedade 'lenght' do array 'listItem'
+
+
+ <img src="info/home.obeserver.carrinho.png" alt="" style="width: 25%; display: block;"/>
