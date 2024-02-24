@@ -146,4 +146,19 @@ obs: adoção da classe 'ObservableList' para permitir que o lenght do array sej
   <img src="info/home.totalItensCarrinho.png" alt="" style="width: 65%; display: block;"/>
 
 
+## implementando a navegação para Checkout() seus itens e totais
 
+- implementação da navegação para home 
+
+obs: Quando é um Navigator para criar uma nova rota, um novo context é gerado  e assim, esse novo context não tem acesso ao Provider com a Store.
+     Para resolver o problema, é armazedo o context da Home em uma variavél, e passada como parâmetro da página de Checkout.
+
+<img src="info/home.navigacao.check.out.png" alt="" style="width: 65%; display: block;"/>
+
+
+- apresentação da lista de itens e atualização do total em 'Checkout()'
+  - utilização do provider para acesso a listaItem
+  - conclusão da 'SilverChildBuildarDelegate' com a apresentação da classe 'OrderIem' onde é passado o item do array
+  - atualização do total com o acesso a variavél 'totalDaCompra' em 'carrinhoStore'
+
+<img src="info/checkout.itens.total.png" alt="" style="width: 65%; display: block;"/>
