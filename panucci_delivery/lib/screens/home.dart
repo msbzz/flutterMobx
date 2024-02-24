@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
                                   Align(
                                     alignment: Alignment.centerRight,
                                     child: Text(
-                                      "R\$ 00,00",
+                                      "R\$ ${carrinhoStore.totalDaCompra.toStringAsFixed(2)}",
                                       style: TextStyle(
                                           fontSize: 16,
                                           color: Theme.of(context)

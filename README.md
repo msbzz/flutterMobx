@@ -135,4 +135,15 @@ obs: adoção da classe 'ObservableList' para permitir que o lenght do array sej
 <img src="info/home.ternario.apresenta.btn.carrinho.png" alt="" style="width: 35%; display: block;"/> 
 
 
+## Conclusão totais carrinho store
+
+- Criamos mais uma variavél 'totalDaCompra' com a anotação '@bservable' para termos acesso ao valor total de produtos selecionado e em seguida criamos o metodos 'atualizaTotalDaCompra' com a anotação '@action' para que atualiza o metodo observavél 'totalDaCompra'
+
+ <img src="info/carrinho.total.valor.compra.png" alt="" style="width: 35%; display: block;"/>
+
+- Na sequencia é atualizado em 'Home()' o valor total da compra concluido os totais apresentados.
+ 
+  <img src="info/home.totalItensCarrinho.png" alt="" style="width: 35%; display: block;"/>
+
+
 
